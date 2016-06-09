@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Laurel Barham - The Official Site</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/flexslider.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+      <script src="scripts/semantic.js"></script>
+    <![endif]-->
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script>    
+  </head>
+  <body>
+  	<header>			
+		<img src="images/HeadBar.png" align="center" />
+	</header>
+    <div id="box">
+      <nav>
+        <ul id="mainnav">
+          <li><div><a href="index.html">Home</a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="biography.html">Bio</a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="experience.html">Experience</a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="gallery.html"><span id="current">Gallery</span></a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="charities.html">Charities</a></div></li>
+		  <!--<li><div><a href="blog.html">Blog</a></div></li>-->
+        </ul>
+      </nav> 
+	  <div id="maincontent">
+ 	  	<p id="switchlink"><a href="gallery.html">Actor</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="gallery-director.html">Director</a>&nbsp;&nbsp;/&nbsp;&nbsp;<span id="currentdisplay">Teacher</span></p>
+	  	<div id="thumbnailcontainer">
+	  		<h2>Photos</h2>
+	        <div class="flexslider carousel">
+	          <ul class="slides">
+				<li>
+				  <a href="images/Teacher/1on1_wef.jpg" class="lightbox_trigger"><img src="images/Teacher/1on1_wef_small.jpg" alt="" /></a>
+				</li>    
+				<li>
+				  <a href="images/Teacher/WEF_workshop.png" class="lightbox_trigger"><img src="images/Teacher/WEF_workshop_small.png" alt="" /></a>
+				</li>    
+                        	
+	          </ul>
+          	</div>	  		
+	  	</div>
+	  	<div id='videocontainer'>
+	  		<h2>Videos</h2>
+	  		<ul>
+	  <!--			<li><a href="https://www.youtube.com/watch?v=fs1oG1tR2GA" target="_blank"><img src="images/bandbvideo.png" /></a></li>
+	  			<li><a href="http://youtu.be/30QETgnz3Q4" target="_blank"><img src="images/suessicalvideo.png" /></a></li>  -->
+	  		</ul>
+	  	</div>
+	  </div>
+      <footer>
+      		<img src="images/Bar.png" alt="spacer line"/>
+      		<div id="socialmedia">
+      			<div><a href="https://www.facebook.com/LaurelJBarham" target="_blank" ><img src="images/Facebook.png" alt="Facebook Icon" /></a></div>
+      			<div><a href="https://twitter.com/LaurelBarham" target="_blank"><img src="images/Twitter.png" alt="Twitter Icon" /></a></div>
+      			<div><a href="http://instagram.com/laurelbarham" target="_blank"><img src="images/Instagram.png" alt="Instagram Icon" /></a></div>
+      			<div><a href="http://www.actorsaccess.com/actor/preview/actor_details.cfm?tab=profile" target="_blank"><img src="images/Actors-Access.png" alt="Actors Access Icon" /></a></div>
+      			<!--<div><a href="email.html" ><img src="images/Email.png" alt="Email Icon" /></a></div>  --> 
+                <div><a href="mailto:laurel@laurelbarham.net" ><img src="images/Email.png" alt="Email Icon" /></a></div>      			
+      		</div>
+
+      		<div style="clear: both;"></div>
+			<h6>Copyright &#169;2014 Laurel Barham All rights reserved.</h6>
+       		<div id="footeremail">
+      			<p>Sign up for my monthly newsletter with<br/>featured content and exclusive details.</p>
+      			<form>
+      				<input type="email" name="newsletteremail" id="emailinput" placeholder="Email Address" />
+      				<button type="submit" name="emailbutton" id="emailsubmit" onclick="alert('Adding your email to the subscription list...');"><img src="images/EmailButton.png" /></button>      				
+      			</form>
+      		</div>			
+      </footer>
+    </div>
+	  <!-- jQuery -->
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+	
+	  <!-- FlexSlider -->
+	  <script defer src="js/jquery.flexslider.js"></script>
+	
+	   <script type="text/javascript">
+	    $(function(){
+	      SyntaxHighlighter.all();
+	    });
+	    $(window).load(function(){
+	      $('.flexslider').flexslider({
+	        animation: "slide",
+	        animationLoop: false,
+	        itemWidth: 150,
+	        itemMargin: 0,
+	        minItems: 2,
+	        maxItems: 4,
+	        start: function(slider){
+	          $('body').removeClass('loading');
+	        }
+	      });
+	    });
+		</script>			
+		
+		<script src="https://code.jquery.com/jquery-1.6.2.min.js"></script>
+		<script>
+		jQuery(document).ready(function($) {
+			
+			$('.lightbox_trigger').click(function(e) {
+				
+				e.preventDefault();
+				var image_href = $(this).attr("href");
+				
+				if ($('#lightbox').length > 0) { // #lightbox exists
+			
+					//insert img tag with clicked link's href as src value
+					$('#content').html('<img src="' + image_href + '" />');
+					
+					//show lightbox window - you can use a transition here if you want, i.e. .show('fast')
+					$('#lightbox').show();
+				}
+				else { //#lightbox does not exist 
+					
+					//create HTML markup for lightbox window
+					var lightbox = 
+					'<div id="lightbox">' +
+						'<p>Click to close</p>' +
+						'<div id="content">' + //insert clicked link's href into img src
+							'<img src="' + image_href +'" />' +
+						'</div>' +	
+					'</div>';
+						
+					//insert lightbox HTML into page
+					$('body').append(lightbox);
+				}		
+
+			});
+			
+			$('#lightbox').live('click', function() {
+				$('#lightbox').hide();				
+			});	
+		});		
+		</script>	
+  </body>
+</html>

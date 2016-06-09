@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Laurel Barham - The Official Site</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+      <script src="scripts/semantic.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<header>			
+		<img src="images/HeadBar.png" align="center" />
+	</header>
+    <div id="box">
+      <nav>
+        <ul id="mainnav">
+          <li><div><a href="index.html">Home</a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="biography.html">Bio</a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="experience.html">Experience</a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="gallery.html">Gallery</a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="charities.html">Charities</a></div></li>
+		  <!--<li><div><a href="blog.html">Blog</a></div></li>-->
+        </ul>
+      </nav> 
+	  <div id="maincontent">
+	  	<form id="emailbox" >
+		  	<div>
+	      		<input type="email" name="email" id="emailaddress" placeholder="Email Address" />
+	      	</div>
+	      	<div>
+	      		<input type="text" name="subject" id="subject" placeholder="Subject" />
+	      	</div>
+	      	<div>
+	      		<textarea id="emailbody" rows="10" cols="64" placeholder="Email Message" ></textarea>
+	      	</div>
+	      	<div id="emailsendbox">
+	      		<button type="submit" name="emailbutton" id="emailsend" onclick="alert('Sending email now....');"><img src="images/EmailIcon.png" /></button>
+	      	</div>      				
+		  </form>
+	  </div>
+      <footer>
+      		<img src="images/Bar.png" alt="spacer line"/>
+      		<div id="socialmedia">
+      			<div><a href="https://www.facebook.com/LaurelJBarham" target="_blank" ><img src="images/Facebook.png" alt="Facebook Icon" /></a></div>
+      			<div><a href="https://twitter.com/LaurelBarham" target="_blank"><img src="images/Twitter.png" alt="Twitter Icon" /></a></div>
+      			<div><a href="http://instagram.com/laurelbarham" target="_blank"><img src="images/Instagram.png" alt="Instagram Icon" /></a></div>
+      			<div><a href="http://www.actorsaccess.com/actor/preview/actor_details.cfm?tab=profile" target="_blank"><img src="images/Actors-Access.png" alt="Actors Access Icon" /></a></div>
+      			<div><a href="email.html" ><img src="images/Email.png" alt="Email Icon" /></a></div>      			
+      		</div>
+
+      		<div style="clear: both;"></div>
+			<h6>Copyright &#169;2014 Laurel Barham All rights reserved.</h6>
+       		<div id="footeremail">
+      			<p>Sign up for my monthly newsletter with<br/>featured content and exclusive details.</p>
+      			<form>
+      				<input type="email" name="newsletteremail" id="emailinput" placeholder="Email Address" />
+      				<button type="submit" name="emailbutton" id="emailsubmit" onclick="alert('Adding your email to the subscription list...');"><img src="images/EmailButton.png" /></button>      				
+      			</form>
+      		</div>			
+      </footer>
+    </div>
+	
+  </body>
+</html>

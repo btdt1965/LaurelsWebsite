@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Laurel Barham - The Official Site</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/flexslider.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+      <script src="scripts/semantic.js"></script>
+    <![endif]-->
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script>
+  </head>
+  <body>
+  	<header>			
+		<img src="images/HeadBar.png" align="center" />
+	</header>
+    <div id="box">
+      <nav>
+        <ul id="mainnav">
+          <li><div><a href="index.html"><span id="current">Home</span></a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="biography.html">Bio</a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="experience.html">Experience</a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="gallery.html">Gallery</a><img src="images/Lines-Between-Pages.png" /></div></li>
+          <li><div><a href="charities.html">Charities</a></div></li>
+		  <!--<li><div><a href="blog.html">Blog</a></div></li>-->
+        </ul>
+      </nav> 
+	  <div id="maincontent">
+	  	<div id="maincontentslides">	  		 
+	        <div class="flexslider">
+	          <ul class="slides">
+	            <li>
+	  	    	    <img src="images/1_Headshot.png" alt="Headshot" />
+	  	    	</li>
+	  	    	<li>
+	  	    	    <img src="images/4_Directing.png" alt="Film Directing" />
+	  	    	</li>
+	  	    	<li>
+	  	    	    <img src="images/3_Actors.png" alt="Acting" />
+	  	    	</li>
+	  	    	<li>
+	  	    	    <img src="images/2_HavingFun.png" alt="Loving Life" />
+	  	    	</li>
+	          </ul>
+	        </div>	  		 
+		</div>
+		<div id="maincontentevents">
+			<div class="events">
+				<a href='http://www.48hourfilm.com/los-angeles-ca' target="_blank"><img src="images/48_hr_film_logo.jpg" alt="48 Hour Film Poster" /></a>
+				<p>The 48 Hour Film Project is a wild and sleepless weekend in which you and a team make a movie - write, shoot, and edit - in just 48 hours. On Friday night, teams draw a genre from a hat. They are then given a character, prop and line to include in their films. On Sunday night, in a wild dash to the drop off event, the film is turned in - and teams celebrate. The film is then screened at a local theater in front of an audience of filmmakers, friends and families.</p>
+			</div>
+			<div class="events">
+				<a href='http://ruskinschool.com/' target="_blank"><img src="images/Ruskin.png" alt="Ruskin Theater Poster" /></a>
+				<p>John Ruskin was Sanford Meisner’s apprentice for many years and served on the acting faculty at the Neighborhood Playhouse under Meisner. The Ruskin School of Acting teaches the Meisner technique and other acting classes.</p>
+			</div>
+			<div class="events">
+				<a href='http://www.aall.in/' target="_blank"><img src="images/WEFLogo.png" alt="Womens Economic Forum Poster" /></a>
+				<p>ALL Ladies League (ALL) is the world’s largest All-inclusive international women’s chamber and a movement for the Welfare, Wealth, and Wellbeing of ALL. ALL is also an ALL inclusive Worldwide Web of Women Leadership and Entrepreneurship in ALL Spheres & Sectors, at ALL Levels and for ALL Sections of Society & Cultures. The acronym ALL stands for our mindset and culture of loving outreach and integration that we hope will create a cultural shift toward seeing one in ALL and ALL in One.</p>
+			</div>
+		</div>
+	  </div>
+      <footer>
+      		<img src="images/Bar.png" alt="spacer line"/>
+      		<div id="socialmedia">
+      			<div><a href="https://www.facebook.com/LaurelJBarham" target="_blank" ><img src="images/Facebook.png" alt="Facebook Icon" /></a></div>
+      			<div><a href="https://twitter.com/LaurelBarham" target="_blank"><img src="images/Twitter.png" alt="Twitter Icon" /></a></div>
+      			<div><a href="http://instagram.com/laurelbarham" target="_blank"><img src="images/Instagram.png" alt="Instagram Icon" /></a></div>
+      			<div><a href="http://www.actorsaccess.com/actor/preview/actor_details.cfm?tab=profile" target="_blank"><img src="images/Actors-Access.png" alt="Actors Access Icon" /></a></div>
+      			<!--<div><a href="email.html" ><img src="images/Email.png" alt="Email Icon" /></a></div>  --> 
+                <div><a href="mailto:laurel@laurelbarham.net" ><img src="images/Email.png" alt="Email Icon" /></a></div>     			
+      		</div>
+
+      		<div style="clear: both;"></div>
+			<h6>Copyright &#169;2014 Laurel Barham All rights reserved.</h6>
+       		<div id="footeremail">
+      			<p>Sign up for my monthly newsletter with<br/>featured content and exclusive details.</p>
+      			<form>
+      				<input type="email" name="newsletteremail" id="emailinput" placeholder="Email Address" />
+      				<button type="submit" name="emailbutton" id="emailsubmit" onclick="alert('Adding your email to the subscription list...');"><img src="images/EmailButton.png" /></button>      				
+      			</form>
+      		</div>			
+      </footer>
+    </div>
+	
+	  <!-- jQuery -->
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+	
+	  <!-- FlexSlider -->
+	  <script defer src="js/jquery.flexslider.js"></script>
+	
+	  <script type="text/javascript">
+	
+	    $(window).load(function(){
+	      $('.flexslider').flexslider({
+	        animation: "slide",
+	        start: function(slider){
+	          $('body').removeClass('loading');
+	        }
+	      });
+	    });
+	  </script>
+		
+	
+  </body>
+</html>
